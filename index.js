@@ -4,13 +4,6 @@
  * - web: webpage http url
  * - ios: iosApp url
  * - android: android app url
- *
- * Example url:
- * '?web=' + encodeURIComponent('https://example.com') +
- * '&ios=' + encodeURIComponent('app://example.com') +
- * '&android=' + encodeURIComponent('intent://example.com#Intent;package=com.example.android;scheme=example;end')
- *
- * These urls can be obtained from here: https://app.urlgeni.us/
  */
 main();
 

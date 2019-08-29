@@ -14,8 +14,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
  * - web: webpage http url
  * - ios: iosApp url
  * - android: android app url
- *
- * These urls can be obtained from here: https://app.urlgeni.us/
  */
 main();
 
