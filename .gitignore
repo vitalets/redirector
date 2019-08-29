@@ -1,0 +1,9 @@
+# modules
+node_modules
+
+# editors
+.idea
+.vscode
+
+npm-debug.log
+

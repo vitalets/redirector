@@ -1,0 +1,24 @@
+{
+  "name": "redirector",
+  "version": "0.0.1",
+  "description": "Redirect to http and native app",
+  "scripts": {
+    "lint": "eslint index.js",
+    "build": "babel index.js -o index.es5.js --presets=@babel/preset-env",
+    "test": "tbd"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "eslint": "^5.16.0",
+    "husky": "^3.0.4"
+  },
+  "license": "MIT"
+}
