@@ -24,7 +24,7 @@ function main() {
   if (urlParams.web) {
     setTimeout(function () {
       return location.href = urlParams.web;
-    }, 0);
+    }, 500);
   } else {
     throw new Error("No \"web\" parameter found in url: ".concat(location.href));
   } // try open ios app
