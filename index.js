@@ -14,7 +14,7 @@ function main() {
 
   // always open web page as fallback
   if (urlParams.web) {
-    setTimeout(() => location.href = urlParams.web, 0);
+    setTimeout(() => location.href = urlParams.web, 500);
   } else {
     throw new Error(`No "web" parameter found in url: ${location.href}`);
   }
