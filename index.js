@@ -8,15 +8,13 @@
 main();
 
 function main() {
-  attachErrorListener();
-
   const urlParams = getUrlParams();
 
   // always open web page as fallback
   if (urlParams.web) {
     setTimeout(() => location.href = urlParams.web, 500);
   } else {
-    throw new Error(`No "web" parameter found in url: ${location.href}`);
+    showError(`No "web" parameter found in url: ${location.href}`);
   }
 
   // try open ios app
@@ -28,12 +26,6 @@ function main() {
   if (urlParams.android && isAndroid()) {
     location.href = urlParams.android;
   }
-}
-
-function attachErrorListener() {
-  window.addEventListener('error', event => {
-    document.getElementById('error').textContent = event.error.message;
-  });
 }
 
 // see: https://stackoverflow.com/questions/6031412/detect-android-phone-via-javascript-jquery
@@ -51,9 +43,13 @@ function getUrlParams() {
   const pairs = query.split('&').filter(Boolean);
   return pairs.reduce((res, pair) => {
     const [key, value] = pair.split('=');
-    if (key) {
+    if (key && value) {
       res[key] = decodeURIComponent(value);
     }
     return res;
   }, {});
+}
+
+function showError(message) {
+  document.getElementById('error').textContent = message;
 }
