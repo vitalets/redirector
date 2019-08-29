@@ -11,9 +11,12 @@ but if possible open it in native VK app.
 
 2. Build redirector url:
    ```js
-   const url = '' +
+   const url = 'https://vitalets.github.io/redirector/index.html' +
     '?web=' + encodeURIComponent('https://vk.com/test') +
     '&ios=' + encodeURIComponent('vk://vk.com/test') +
     '&android=' + encodeURIComponent('intent://vk.com/test#Intent;package=com.vkontakte.android;scheme=vkontakte;end');
    ```
-3. Test it: https://vitalets.github.io/redirector/index.html?web=https%3A%2F%2Fexample.com&ios=app%3A%2F%2Fexample.com&android=intent%3A%2F%2Fexample.com%23Intent%3Bpackage%3Dcom.example.android%3Bscheme%3Dexample%3Bend;
+3. [Try it](https://vitalets.github.io/redirector/index.html?web=https%3A%2F%2Fvk.com%2Ftest&ios=vk%3A%2F%2Fvk.com%2Ftest&android=intent%3A%2F%2Fvk.com%2Ftest%23Intent%3Bpackage%3Dcom.vkontakte.android%3Bscheme%3Dvkontakte%3Bend)
+   ```
+   https://vitalets.github.io/redirector/index.html?web=https%3A%2F%2Fvk.com%2Ftest&ios=vk%3A%2F%2Fvk.com%2Ftest&android=intent%3A%2F%2Fvk.com%2Ftest%23Intent%3Bpackage%3Dcom.vkontakte.android%3Bscheme%3Dvkontakte%3Bend
+   ```
