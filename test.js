@@ -25,7 +25,7 @@ it('should not redirect without params', async () => {
   await page.goto(url);
   await page.waitFor(600);
   assert.strictEqual(page.url(), BASE_URL);
-  assert.include(await page.$eval('#error', el => el.textContent), 'No "web" parameter found in url');
+  assert.include(await page.$eval('div', el => el.textContent), 'No "web" parameter found in url');
 });
 
 it('should redirect to web', async () => {
@@ -33,9 +33,10 @@ it('should redirect to web', async () => {
     web: TARGET_URL
   });
   await page.setUserAgent(USER_AGENTS.web);
-  await page.goto(url);
-  await page.waitFor(600);
-  assert.strictEqual(page.url(), TARGET_URL);
+  await Promise.all([
+    page.goto(url),
+    page.waitForRequest(TARGET_URL),
+  ]);
 });
 
 it('should redirect to ios', async () => {
@@ -44,9 +45,10 @@ it('should redirect to ios', async () => {
     ios: TARGET_URL,
   });
   await page.setUserAgent(USER_AGENTS.ios);
-  await page.goto(url);
-  await page.waitFor(600);
-  assert.strictEqual(page.url(), TARGET_URL);
+  await Promise.all([
+    page.goto(url),
+    page.waitForRequest(TARGET_URL),
+  ]);
 });
 
 it('should redirect to android', async () => {
@@ -55,9 +57,10 @@ it('should redirect to android', async () => {
     android: TARGET_URL,
   });
   await page.setUserAgent(USER_AGENTS.android);
-  await page.goto(url);
-  await page.waitFor(600);
-  assert.strictEqual(page.url(), TARGET_URL);
+  await Promise.all([
+    page.goto(url),
+    page.waitForRequest(TARGET_URL),
+  ]);
 });
 
 after(async () => {

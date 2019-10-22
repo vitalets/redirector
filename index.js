@@ -51,5 +51,8 @@ function getUrlParams() {
 }
 
 function showError(message) {
-  document.getElementById('error').textContent = message;
+  const el = document.createElement('div');
+  el.style.color = 'red';
+  el.textContent = message;
+  document.body.appendChild(el);
 }

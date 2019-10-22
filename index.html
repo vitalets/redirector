@@ -3,11 +3,10 @@
 <head>
 </head>
 <body>
-  <div id="error" style="color:red"></div>
   <script>"use strict";function _slicedToArray(a,b){return _arrayWithHoles(a)||_iterableToArrayLimit(a,b)||_nonIterableRest()}function _nonIterableRest(){throw new TypeError("Invalid attempt to destructure non-iterable instance")}function _iterableToArrayLimit(a,b){var c=[],d=!0,e=!1,f=void 0;try{for(var g,h=a[Symbol.iterator]();!(d=(g=h.next()).done)&&(c.push(g.value),!(b&&c.length===b));d=!0);}catch(a){e=!0,f=a}finally{try{d||null==h["return"]||h["return"]()}finally{if(e)throw f}}return c}function _arrayWithHoles(a){if(Array.isArray(a))return a}main();function main(){var a=getUrlParams();// always open web page as fallback
 a.web?setTimeout(function(){return location.href=a.web},500):showError("No \"web\" parameter found in url: ".concat(location.href)),a.ios&&isIos()&&(location.href=a.ios),a.android&&isAndroid()&&(location.href=a.android)}// see: https://stackoverflow.com/questions/6031412/detect-android-phone-via-javascript-jquery
 function isAndroid(){return /android/i.test(navigator.userAgent)}// see: https://stackoverflow.com/questions/9038625/detect-if-device-is-ios
-function isIos(){return /iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream}function getUrlParams(){var a=location.search.replace(/^\?/,""),b=a.split("&").filter(Boolean);return b.reduce(function(a,b){var c=b.split("="),d=_slicedToArray(c,2),e=d[0],f=d[1];return e&&f&&(a[e]=decodeURIComponent(f)),a},{})}function showError(a){document.getElementById("error").textContent=a}
+function isIos(){return /iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream}function getUrlParams(){var a=location.search.replace(/^\?/,""),b=a.split("&").filter(Boolean);return b.reduce(function(a,b){var c=b.split("="),d=_slicedToArray(c,2),e=d[0],f=d[1];return e&&f&&(a[e]=decodeURIComponent(f)),a},{})}function showError(a){var b=document.createElement("div");b.style.color="red",b.textContent=a,document.body.appendChild(b)}
 
 </script>
 </body>
