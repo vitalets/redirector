@@ -4,7 +4,7 @@
   "description": "Redirect to http and native app",
   "scripts": {
     "lint": "eslint index.js",
-    "build": "babel index.js -o index.es5.js --presets=@babel/preset-env",
+    "build": "node build.js",
     "test": "tbd"
   },
   "husky": {
@@ -17,6 +17,7 @@
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "babel-preset-minify": "^0.5.1",
     "eslint": "^5.16.0",
     "husky": "^3.0.4"
   },
