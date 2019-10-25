@@ -16,7 +16,10 @@ but if possible open it in native VK app.
     '&ios=' + encodeURIComponent('vk://vk.com/buzovaofficial') +
     '&android=' + encodeURIComponent('intent://vk.com/buzovaofficial#Intent;package=com.vkontakte.android;scheme=vkontakte;end');
    ```
-3. [Try it](https://vitalets.github.io/redirector?web=https%3A%2F%2Fvk.com%2Fbuzovaofficial&ios=vk%3A%2F%2Fvk.com%2Fbuzovaofficial&android=intent%3A%2F%2Fvk.com%2Fbuzovaofficial%23Intent%3Bpackage%3Dcom.vkontakte.android%3Bscheme%3Dvkontakte%3Bend)
+   Result:
    ```
    https://vitalets.github.io/redirector?web=https%3A%2F%2Fvk.com%2Fbuzovaofficial&ios=vk%3A%2F%2Fvk.com%2Fbuzovaofficial&android=intent%3A%2F%2Fvk.com%2Fbuzovaofficial%23Intent%3Bpackage%3Dcom.vkontakte.android%3Bscheme%3Dvkontakte%3Bend
    ```
+   
+3. [Open this link on ios, android or desktop](https://vitalets.github.io/redirector?web=https%3A%2F%2Fvk.com%2Fbuzovaofficial&ios=vk%3A%2F%2Fvk.com%2Fbuzovaofficial&android=intent%3A%2F%2Fvk.com%2Fbuzovaofficial%23Intent%3Bpackage%3Dcom.vkontakte.android%3Bscheme%3Dvkontakte%3Bend)
+
